@@ -8,7 +8,7 @@ entity top is
         err: out std_logic;
         data_valid: inout std_logic
     );
-end SerialDataReceiver;
+end top;
 
 architecture beh of top is
     signal QS: std_logic_vector(9 downto 0) := (others => '0');
