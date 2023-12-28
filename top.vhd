@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity SerialDataReceiver is 
+entity top is 
     port (
         din, clk: in std_logic;
         data: out std_logic_vector (6 downto 0);
@@ -10,7 +10,7 @@ entity SerialDataReceiver is
     );
 end SerialDataReceiver;
 
-architecture beh of SerialDataReceiver is
+architecture beh of top is
     signal QS: std_logic_vector(9 downto 0) := (others => '0');
     signal start_detected: std_logic := '0';
     signal reception_done: std_logic := '0';
